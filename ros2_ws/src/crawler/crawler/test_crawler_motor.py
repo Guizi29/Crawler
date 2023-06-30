@@ -23,10 +23,10 @@ class Test(Node):
         super().__init__('test_node')
         self.CR = Crawler()
         self.test_init_on()
-        self.direction_publisher_ = self.create_publisher(String, 'direction', 10)  # Remplacez 'topic_name' par le nom du topic souhaité
-        self.timer_ = self.create_timer(1.0, self.publish_direction)
-        self.speed_publisher_ = self.create_publisher(String, 'speed', 10)  # Remplacez 'topic_name' par le nom du topic souhaité
-        self.timer_ = self.create_timer(1.0, self.publish_speed)
+        self.direction_publisher_ = self.create_publisher(String, 'direction', 10)  
+        self.timer_direction = self.create_timer(1.0, self.publish_direction)
+        self.speed_publisher_ = self.create_publisher(String, 'speed', 10)  
+        self.timer_speed = self.create_timer(1.0, self.publish_speed)
         #sleep(10)
         self.test_move_front()
         self.test_move_back()
