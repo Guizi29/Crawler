@@ -88,12 +88,12 @@ class Test(Node):
     def publish_direction(self): 
         msg = String()
         msg.data = self.DIRECTION
-        self.publisher_.publish(msg)
+        self.direction_publisher_.publish(msg)
     
     def publish_speed(self):
         msg = String()
         msg.data = self.SPEED
-        self.publisher_.publish(msg)
+        self.speed_publisher_.publish(msg)
 
 
 def main(args=None):
