@@ -90,12 +90,14 @@ class Test(Node):
         msg.data = self.DIRECTION
         print("Publishing direction:", self.DIRECTION)
         self.direction_publisher_.publish(msg)
+        self.get_logger().info('Published direction: %s' % msg.data)
     
     def publish_speed(self):
         msg = String()
         msg.data = self.SPEED
         print("Publishing speed:", self.SPEED)
         self.speed_publisher_.publish(msg)
+        self.get_logger().info('Published speed: %s' % msg.data)
 
 
 def main(args=None):
