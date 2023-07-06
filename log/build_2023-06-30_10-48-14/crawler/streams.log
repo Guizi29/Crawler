@@ -1,0 +1,24 @@
+[4.529s] Invoking command in '/home/odroid/ros2_ws/src/crawler': PYTHONPATH=/home/odroid/ros2_ws/build/crawler/prefix_override:/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/crawler build --build-base /home/odroid/ros2_ws/build/crawler/build install --record /home/odroid/ros2_ws/build/crawler/install.log --single-version-externally-managed
+[6.280s] running egg_info
+[6.285s] writing ../../build/crawler/crawler.egg-info/PKG-INFO
+[6.286s] writing dependency_links to ../../build/crawler/crawler.egg-info/dependency_links.txt
+[6.287s] writing entry points to ../../build/crawler/crawler.egg-info/entry_points.txt
+[6.289s] writing requirements to ../../build/crawler/crawler.egg-info/requires.txt
+[6.291s] writing top-level names to ../../build/crawler/crawler.egg-info/top_level.txt
+[6.302s] reading manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'
+[6.308s] writing manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'
+[6.309s] running build
+[6.309s] running build_py
+[6.313s] running install
+[6.314s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[6.314s]   warnings.warn(
+[6.315s] running install_lib
+[6.323s] byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/test_crawler_motor.py to test_crawler_motor.cpython-310.pyc
+[6.326s] Sorry: TabError: inconsistent use of tabs and spaces in indentation (test_crawler_motor.py, line 92)
+[6.327s] running install_data
+[6.331s] running install_egg_info
+[6.340s] removing '/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler-0.0.0-py3.10.egg-info' (and everything under it)
+[6.341s] Copying ../../build/crawler/crawler.egg-info to /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler-0.0.0-py3.10.egg-info
+[6.346s] running install_scripts
+[6.475s] writing list of installed files to '/home/odroid/ros2_ws/build/crawler/install.log'
+[6.698s] Invoked command in '/home/odroid/ros2_ws/src/crawler' returned '0': PYTHONPATH=/home/odroid/ros2_ws/build/crawler/prefix_override:/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/crawler build --build-base /home/odroid/ros2_ws/build/crawler/build install --record /home/odroid/ros2_ws/build/crawler/install.log --single-version-externally-managed

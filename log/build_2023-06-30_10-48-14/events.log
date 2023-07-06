@@ -1,0 +1,96 @@
+[0.000000] (-) TimerEvent: {}
+[0.001299] (crawler) JobQueued: {'identifier': 'crawler', 'dependencies': OrderedDict()}
+[0.002614] (crawler) JobStarted: {'identifier': 'crawler'}
+[0.098869] (-) TimerEvent: {}
+[0.199700] (-) TimerEvent: {}
+[0.300521] (-) TimerEvent: {}
+[0.401338] (-) TimerEvent: {}
+[0.502147] (-) TimerEvent: {}
+[0.603300] (-) TimerEvent: {}
+[0.704079] (-) TimerEvent: {}
+[0.804892] (-) TimerEvent: {}
+[0.905673] (-) TimerEvent: {}
+[1.006480] (-) TimerEvent: {}
+[1.107313] (-) TimerEvent: {}
+[1.208094] (-) TimerEvent: {}
+[1.309124] (-) TimerEvent: {}
+[1.409899] (-) TimerEvent: {}
+[1.510980] (-) TimerEvent: {}
+[1.612074] (-) TimerEvent: {}
+[1.712856] (-) TimerEvent: {}
+[1.813942] (-) TimerEvent: {}
+[1.915047] (-) TimerEvent: {}
+[2.015937] (-) TimerEvent: {}
+[2.116754] (-) TimerEvent: {}
+[2.217561] (-) TimerEvent: {}
+[2.318714] (-) TimerEvent: {}
+[2.419795] (-) TimerEvent: {}
+[2.520874] (-) TimerEvent: {}
+[2.621671] (-) TimerEvent: {}
+[2.722451] (-) TimerEvent: {}
+[2.823570] (-) TimerEvent: {}
+[2.924337] (-) TimerEvent: {}
+[3.025128] (-) TimerEvent: {}
+[3.126191] (-) TimerEvent: {}
+[3.227019] (-) TimerEvent: {}
+[3.328089] (-) TimerEvent: {}
+[3.428876] (-) TimerEvent: {}
+[3.529697] (-) TimerEvent: {}
+[3.630783] (-) TimerEvent: {}
+[3.731570] (-) TimerEvent: {}
+[3.832381] (-) TimerEvent: {}
+[3.933494] (-) TimerEvent: {}
+[4.034657] (-) TimerEvent: {}
+[4.135467] (-) TimerEvent: {}
+[4.236282] (-) TimerEvent: {}
+[4.337366] (-) TimerEvent: {}
+[4.438220] (-) TimerEvent: {}
+[4.529448] (crawler) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/crawler', 'build', '--build-base', '/home/odroid/ros2_ws/build/crawler/build', 'install', '--record', '/home/odroid/ros2_ws/build/crawler/install.log', '--single-version-externally-managed'], 'cwd': '/home/odroid/ros2_ws/src/crawler', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'QT_SCALE_FACTOR': '1', 'LANGUAGE': 'en', 'USER': 'odroid', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'COMPIZ_CONFIG_PROFILE': 'mate', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/odroid', 'OLDPWD': '/home/odroid/ros2_ws/src', 'DESKTOP_SESSION': 'mate', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'UBUNTU_MENUPROXY': '1', 'QT_QPA_PLATFORMTHEME': 'gtk2', 'COLCON_PREFIX_PATH': '/home/odroid/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'odroid', 'WINDOWID': '54526103', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GTK_OVERLAY_SCROLLING': '0', 'XDG_SESSION_ID': 'c2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/odroid/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/odroid:@/tmp/.ICE-unix/3648,unix/odroid:/tmp/.ICE-unix/3648', 'GDM_LANG': 'en', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'MATE', 'XDG_SESSION_DESKTOP': 'mate', 'XAUTHORITY': '/home/odroid/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/odroid', 'AMENT_PREFIX_PATH': '/home/odroid/ros2_ws/install/crawler:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'mate', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'PWD': '/home/odroid/ros2_ws/build/crawler', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-mate:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/mate:/usr/share/mate:/home/odroid/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/odroid/ros2_ws/build/crawler/prefix_override:/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages:/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'MATE_DESKTOP_SESSION_ID': 'this-is-deprecated', 'COLCON': '1', 'VTE_VERSION': '6800', 'QT_FONT_DPI': '96'}, 'shell': False}
+[4.538652] (-) TimerEvent: {}
+[4.639524] (-) TimerEvent: {}
+[4.740360] (-) TimerEvent: {}
+[4.841152] (-) TimerEvent: {}
+[4.942236] (-) TimerEvent: {}
+[5.043349] (-) TimerEvent: {}
+[5.144455] (-) TimerEvent: {}
+[5.245553] (-) TimerEvent: {}
+[5.346660] (-) TimerEvent: {}
+[5.447727] (-) TimerEvent: {}
+[5.548812] (-) TimerEvent: {}
+[5.649885] (-) TimerEvent: {}
+[5.750965] (-) TimerEvent: {}
+[5.851762] (-) TimerEvent: {}
+[5.952864] (-) TimerEvent: {}
+[6.053662] (-) TimerEvent: {}
+[6.154762] (-) TimerEvent: {}
+[6.255824] (-) TimerEvent: {}
+[6.282527] (crawler) StdoutLine: {'line': b'running egg_info\n'}
+[6.287391] (crawler) StdoutLine: {'line': b'writing ../../build/crawler/crawler.egg-info/PKG-INFO\n'}
+[6.288802] (crawler) StdoutLine: {'line': b'writing dependency_links to ../../build/crawler/crawler.egg-info/dependency_links.txt\n'}
+[6.289690] (crawler) StdoutLine: {'line': b'writing entry points to ../../build/crawler/crawler.egg-info/entry_points.txt\n'}
+[6.291706] (crawler) StdoutLine: {'line': b'writing requirements to ../../build/crawler/crawler.egg-info/requires.txt\n'}
+[6.293160] (crawler) StdoutLine: {'line': b'writing top-level names to ../../build/crawler/crawler.egg-info/top_level.txt\n'}
+[6.304791] (crawler) StdoutLine: {'line': b"reading manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'\n"}
+[6.310675] (crawler) StdoutLine: {'line': b"writing manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'\n"}
+[6.311725] (crawler) StdoutLine: {'line': b'running build\n'}
+[6.312385] (crawler) StdoutLine: {'line': b'running build_py\n'}
+[6.315793] (crawler) StdoutLine: {'line': b'running install\n'}
+[6.316795] (crawler) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[6.317473] (crawler) StderrLine: {'line': b'  warnings.warn(\n'}
+[6.318205] (crawler) StdoutLine: {'line': b'running install_lib\n'}
+[6.326173] (crawler) StdoutLine: {'line': b'byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/test_crawler_motor.py to test_crawler_motor.cpython-310.pyc\n'}
+[6.329034] (crawler) StderrLine: {'line': b'Sorry: TabError: inconsistent use of tabs and spaces in indentation (test_crawler_motor.py, line 92)\n'}
+[6.329913] (crawler) StdoutLine: {'line': b'running install_data\n'}
+[6.334074] (crawler) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.342502] (crawler) StdoutLine: {'line': b"removing '/home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.343867] (crawler) StdoutLine: {'line': b'Copying ../../build/crawler/crawler.egg-info to /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler-0.0.0-py3.10.egg-info\n'}
+[6.348761] (crawler) StdoutLine: {'line': b'running install_scripts\n'}
+[6.356004] (-) TimerEvent: {}
+[6.456758] (-) TimerEvent: {}
+[6.477627] (crawler) StdoutLine: {'line': b"writing list of installed files to '/home/odroid/ros2_ws/build/crawler/install.log'\n"}
+[6.556984] (-) TimerEvent: {}
+[6.657864] (-) TimerEvent: {}
+[6.700416] (crawler) CommandEnded: {'returncode': 0}
+[6.763138] (-) TimerEvent: {}
+[6.792435] (crawler) JobEnded: {'identifier': 'crawler', 'rc': 0}
+[6.797726] (-) EventReactorShutdown: {}

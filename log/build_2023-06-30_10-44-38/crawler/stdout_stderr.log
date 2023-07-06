@@ -1,0 +1,55 @@
+running egg_info
+creating ../../build/crawler/crawler.egg-info
+writing ../../build/crawler/crawler.egg-info/PKG-INFO
+writing dependency_links to ../../build/crawler/crawler.egg-info/dependency_links.txt
+writing entry points to ../../build/crawler/crawler.egg-info/entry_points.txt
+writing requirements to ../../build/crawler/crawler.egg-info/requires.txt
+writing top-level names to ../../build/crawler/crawler.egg-info/top_level.txt
+writing manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'
+reading manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'
+writing manifest file '../../build/crawler/crawler.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/odroid/ros2_ws/build/crawler/build
+creating /home/odroid/ros2_ws/build/crawler/build/lib
+creating /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/__init__.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/crawler.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/exemple_publish.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/calibrate.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/test_crawler_motor.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/motor.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/config.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+copying crawler/test_crawler_motor2.py -> /home/odroid/ros2_ws/build/crawler/build/lib/crawler
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/__init__.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/crawler.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/exemple_publish.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/calibrate.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/test_crawler_motor.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/motor.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/config.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+copying /home/odroid/ros2_ws/build/crawler/build/lib/crawler/test_crawler_motor2.py -> /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/crawler.py to crawler.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/exemple_publish.py to exemple_publish.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/calibrate.py to calibrate.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/test_crawler_motor.py to test_crawler_motor.cpython-310.pyc
+Sorry: TabError: inconsistent use of tabs and spaces in indentation (test_crawler_motor.py, line 92)
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/motor.py to motor.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/config.py to config.cpython-310.pyc
+byte-compiling /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler/test_crawler_motor2.py to test_crawler_motor2.cpython-310.pyc
+running install_data
+creating /home/odroid/ros2_ws/install/crawler/share/ament_index
+creating /home/odroid/ros2_ws/install/crawler/share/ament_index/resource_index
+creating /home/odroid/ros2_ws/install/crawler/share/ament_index/resource_index/packages
+copying resource/crawler -> /home/odroid/ros2_ws/install/crawler/share/ament_index/resource_index/packages
+copying package.xml -> /home/odroid/ros2_ws/install/crawler/share/crawler
+running install_egg_info
+Copying ../../build/crawler/crawler.egg-info to /home/odroid/ros2_ws/install/crawler/lib/python3.10/site-packages/crawler-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/odroid/ros2_ws/build/crawler/install.log'
