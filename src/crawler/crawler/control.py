@@ -4,7 +4,6 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from crawler import Crawler 
 from motor import Motor 
-from std_msgs.msg import String
 
 class Control(Node):
     

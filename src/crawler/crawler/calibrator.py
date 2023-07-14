@@ -16,11 +16,13 @@ class Calibrator(Node):
     def __init__(self):
         super().__init__('calibrator')
         self.instruction_publisher_ = self.create_publisher(String, 'instruction', 10)  
-        self.compass_publisher_ = self.create_publisher(String, 'orientation', 10)
+        self.compass_publisher_ = self.create_publisher(String, 'compass', 10)
         self.publish_instruction()
         self.calibration()
         self.publish_instruction()
-        self.publish_compass()
+        while rclpy.ok():
+            self.publish_compass()
+            time.sleep(5)
         rclpy.shutdown()
               
     def calibration(self):

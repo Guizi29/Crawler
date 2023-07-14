@@ -1,35 +1,40 @@
 import qwiic_icm20948
-import rclpy
 import time
-import signal
-import matplotlib.pyplot as plt
-import os
+import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Imu
 from std_msgs.msg import String
 
 class Direction(Node):
-   
+
     myIMU = qwiic_icm20948.QwiicIcm20948()
-    NORTH_x = 0 
+    NORTH_x = 0
     SOUTH_x = 0
-    NORTH_y = 0
-    SOUTH_y = 0
+    NORTH_y = 0 
+    SOUTH_y = 0 
     X = 0
     Y = 0
-
+    
     def __init__(self):
-        super().__init__('direction_node')
-        self.calibrate()
-        print([self.NORTH_x, self.SOUTH_x])
-        print([self.NORTH_y, self.SOUTH_y])
+        super().__init__('publisher_orientation')
+        self.subscription = self.create_subscription(
+            String,
+            'compass',
+            self.compass_callback,
+            10
+        )
         self.publisher_ = self.create_publisher(String, 'orientation', 10)
-        self.timer_ = self.create_timer(1.0, self.publish_direction)
-        while True : 
-            self.mesure_degrees()
-            print([self.X, self.Y])
-            time.sleep(5)
-
+            
+    def compass_callback(self, msg):
+        self.get_logger().info("Message received: %s" %msg.data)
+        print(msg.data)
+        coordinates = eval(msg.data)
+        self.NORTH_x = coordinates[0]
+        self.SOUTH_x = coordinates[1]
+        self.NORTH_y = coordinates[2]
+        self.SOUTH_y = coordinates[3]
+        self.mesure_degrees()
+        self.publish_direction()
+                    
     def mesure_degrees(self): 
         self.myIMU.getAgmt()
         mag_x = self.myIMU.mxRaw
@@ -59,8 +64,7 @@ class Direction(Node):
         if mag_y2-20 <= mag_y <= mag_y2+20:
             self.X = degree_x2
             self.Y = degree_y2
-        
-    
+            
     def from_mag_to_degrees(self, mag):
         degree_1 = (mag - self.NORTH_x)/((self.SOUTH_x-self.NORTH_x)/180) # 
         degree_2 = (mag - self.SOUTH_x)/((self.NORTH_x-self.SOUTH_x)/180) + 180 #
@@ -81,48 +85,17 @@ class Direction(Node):
         else:
             return degree      
         
-    def calibrate(self):
-        with open("/home/odroid/ros2_ws/src/crawler/resource/donnees.csv", "a") as fichier:
-            for i in range(1,41):
-                self.myIMU.getAgmt()
-                fichier.write(
-                f"{self.myIMU.mxRaw} {self.myIMU.myRaw}\n"
-                )
-                time.sleep(1)
-        with open("/home/odroid/ros2_ws/src/crawler/resource/donnees.csv", 'r') as file:
-            x_values = []
-            y_values = []
-            for line in file:
-                data = line.strip().split()
-                x_values.append(float(data[0]))
-                y_values.append(float(data[1]))
-            self.NORTH_x = max(x_values)
-            self.SOUTH_x = min(x_values)
-            self.NORTH_y = max(y_values)
-            self.SOUTH_y = min(y_values)
-           
     def publish_direction(self):
         msg = String()
-        msg.data = "322"
+        msg.data = str([self.X, self.Y])
         self.publisher_.publish(msg)
         self.get_logger().info('Published: "%s"' % msg.data)
 
-
-def signal_handler(sig, frame):
-    rclpy.shutdown()
-
 def main(args=None):
-    
     rclpy.init(args=args)
-    open("/home/odroid/ros2_ws/src/crawler/resource/donnees.csv", "w").close()
-
     direction = Direction()
-
-    #signal.signal(signal.SIGINT, signal_handler)
-
     rclpy.spin(direction)
-
-    #direction.destroy_node()
+    direction.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
