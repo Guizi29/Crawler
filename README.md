@@ -68,7 +68,7 @@ Here's a short explanation of each code in the repertory /crawler.
 These codes, called nodes, communicate with each other via topics in which the codes publish messages and listen to them.
 Here is the rqt graph representing the link between nodes.
 
-
+![rqt_graph](img/rqt_graph.png)
 	
 This is the graph as it would look if all nodes were running at the same time.
 What's more, not all nodes are working properly yet, and some need to be reworked. 
@@ -114,9 +114,6 @@ The sensor is connected to the odroid c4 via 4 connectors:
 - DA (data) must be connected to pin i2c SDA while CL (clock) must be connected to pin i2c SCL.
 
 
-
-
-
 When we set up the system we chose to connect the pins in this way:
 
 - VIN - pin 17
@@ -129,7 +126,7 @@ When we set up the system we chose to connect the pins in this way:
 
 The diagram shows : 
 
-
+![shematic](img/Shematic.png)
 
 ### Install all components 
 
