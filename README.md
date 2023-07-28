@@ -41,7 +41,8 @@ Once the upgrade is complete, you can install ROS 2 Humble according to the inst
 Once ROS 2 Humble is installed. You'll still need to source it each time you open a new terminal to run code using ROS2. 
 
 The command is as follows :
-source /opt/ros/humble/setup.bash
+
+	- source /opt/ros/humble/setup.bash
 
 In order to run the crawler from an appropriate environment, a workspace has been created under the name ros2_ws.
 It contains all the programs required to run the crawler.
