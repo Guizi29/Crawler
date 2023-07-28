@@ -1,26 +1,26 @@
 # Datasheet for the crawler 
 
-Author : Guillaume Cren
+**Author** : Guillaume Cren
 
-Contact : crenguillaume29@gmail.com 
+**Contact** : crenguillaume29@gmail.com 
 
-Date : 06/2023
-
-
-Hardware :
-
-Odroid C4 
-
-Sensor IMU Sparkfun Qwiic 9DoF ICM20948
-
-Speed controller Faulhaber SC5008s 3530
+**Date** : 06/2023
 
 
-Software : 
+**Hardware** :
 
-Ubuntu 22.04 
+	-Odroid C4 
 
-ROS 2 Humble
+	-Sensor IMU Sparkfun Qwiic 9DoF ICM20948
+
+	-Speed controller Faulhaber SC5008s 3530
+
+
+**Software** : 
+
+	-Ubuntu 22.04 
+
+	-ROS 2 Humble
 
 
 ## Purpose of the project
