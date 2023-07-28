@@ -76,7 +76,7 @@ These include /trajector, which doesn't work yet but has already been sketched o
 
 As for the /resource directory, it contains the no-python files used by some nodes to perform certain tasks. Here's an explanation of these files:
 
-- donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic 		field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
+- donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic 	       field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
 
 - scripts.sh : This file contains all the scripts used by motor.py to write to directories related to crawler control (PWM, GPIO...).
 	 
@@ -86,7 +86,7 @@ Some of these codes are imperative to the robot's operation and must be executed
 before launching nodes in the /crawler directory.
 
 - test_imu.py : This code is used to start the IMU sensor, and must be executed first.  
-	Before executing this code, go to /dev, then execute the following line : 
+  Before executing this code, go to /dev, then execute the following line : 
 
 	sudo chmod 666 i2c-1
 
