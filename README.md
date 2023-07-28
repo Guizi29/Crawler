@@ -50,22 +50,22 @@ This directory contains the ROS2 work tree. It contains all the code required to
 			- __init__.py
 			- motor.py
 			- trajector.py
-			- __pycache__
+			- __pycache__/
 	    - resource/
-		- donnees.csv
-		- scripts.sh
+			- donnees.csv
+			- scripts.sh
             - test/
-            	- config.py
-            	- crawler.py
-            	- motor.py
-            	- test_copyright.py
-            	- test_crawler_motor.py
-            	- test_flake8.py
-            	- test_imu.py
-            	- test_instructions_dir.py
-            	- test_instructions_speed.py
-            	- test_pep257.py
-            	- __pycache__
+            		- config.py
+            		- crawler.py
+            		- motor.py
+            		- test_copyright.py
+            		- test_crawler_motor.py
+            		- test_flake8.py
+            		- test_imu.py
+            		- test_instructions_dir.py
+            		- test_instructions_speed.py
+            		- test_pep257.py
+            		- __pycache__/
             - package.xml
             - setup.cfg
             - setup.py
