@@ -37,9 +37,9 @@ This directory contains the ROS2 work tree. It contains all the code required to
 ros2_ws/        
 	├── build/          
 	├── install/        	                                                                      
-	├── log/            	
-    	├── src/  	
-          ├── crawler/  
+	├── log/                              	
+    	├── src/  	               
+          ├── crawler/                
               ├── crawler/
               ├── calibrate.py
               ├── calibrator.py
