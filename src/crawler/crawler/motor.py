@@ -1,7 +1,6 @@
-
-# Name of the program : init_motor.py
+# Name of the program : motor.py
 #
-# Create a node to initialiaze the function of the crawler like PWM, GPIO or IO2
+# Class including initialization and control functions for PWM, IO2 directories, etc.
 #
 # Author: Guillaume Cren & Marie Le Bris
 # Date: 14/06/2023
@@ -13,7 +12,8 @@ import subprocess
 
 class Motor(Node):
 
-    script_path = "../resource/scripts.sh" 
+    script_path = "../resource/scripts.sh" #path of the script file containing the commands used to control repertories 
+    
     ## The constructor.
     #  @param self The object pointer.
     #  @param GPIO_DIR: GPIO number which manages the direction of rotation of the motor
@@ -27,7 +27,7 @@ class Motor(Node):
         self.GPIO_DIR_number = GPIO_DIR
         self.GPIO_IO2_number = GPIO_IO2
         self.PWM_number = PWM
-        self.get_logger().info('MOTOR initialized')
+        #self.get_logger().info('MOTOR initialized')
 
     #############################################--INIT METHOD GPIO--#############################################
     ## Documentation for a method.
@@ -150,7 +150,7 @@ class Motor(Node):
                         print(f"Erreur lors de l'exécution de la commande: {e}")
                         return False  # There is an error, return False
         try:
-            value_duty_cycle = int((float(duty_cycle) / 100) * 20000000)
+            value_duty_cycle = int((float(duty_cycle) / 100) * 18000000)
             subprocess.call([self.script_path, str(value_duty_cycle), "section6", str(PWM_number)])
             return True  # There is no error, return True
         except subprocess.CalledProcessError as e:

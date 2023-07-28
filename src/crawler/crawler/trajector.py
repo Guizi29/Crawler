@@ -17,7 +17,7 @@ class Trajector(Node):
             self.orientation_callback,
             10
             )
-        instruction_publisher_ = self.create_publisher(String, 'instruction', 10)
+        self.instruction_publisher_ = self.create_publisher(String, 'instruction', 10)
         
     def orientation_callback(self, msg):
 
@@ -29,39 +29,42 @@ class Trajector(Node):
         if self.directionUser == "none":
             pass 
         else:
+            print(msg.data)
             eval(msg.data)
-            self.X = msg.data[0]
-            int(self.X)
+            print(msg.data)
+            self.X = msg.data[1]
+            print(self.X)
+            Xint = int(self.X)
             minX = int(self.directionUser)-180 
             maxX = int(self.directionUser)+180
             if minX < 0 :
                 #I1 = interval[directionUser-180+360, 360] #Crawler will be rotating left 
                 #I2 = interval[0, directionUser] #Crawler will be rotating left
                 #I3 = interval[directionUser, directionUser-180+360] #Crawler will be rotating right
-                if 0 < self.X < int(self.directionUser) or int(self.directionUser)-180+360 < self.X < 360: 
-                    while not int(self.directionUser)-10 < self.X < int(self.directionUser)+10:
-                        publish_instruction("LEFT")
+                if 0 < Xint < int(self.directionUser) or int(self.directionUser)-180+360 < Xint < 360: 
+                    while not int(self.directionUser)-10 < Xint < int(self.directionUser)+10:
+                        self.publish_instruction("LEFT")
                 else:
-                    while not int(self.directionUser)-10 < self.X < int(self.directionUser)+10:
-                        publish_instruction("RIGHT")
+                    while not int(self.directionUser)-10 < Xint < int(self.directionUser)+10:
+                        self.publish_instruction("RIGHT")
                 self.directionUser = "none"
             if maxX > 360 :
                 #I1 = interval[directionUser, 360] #Crawler will be rotating right
                 #I2 = interval[0, directionUser-360+180] #Crawler will be rotating right
                 #I3 = interval[directionUser-360+180, directionUser] #Crawler will be rotating left
-                if 0 < self.X < int(self.directionUser)-360+180 or int(self.directionUser) < self.X < 360: 
-                    while not int(self.directionUser)-10 < self.X < int(self.directionUser)+10:
-                        publish_instruction("RIGHT")
+                if 0 < Xint < int(self.directionUser)-360+180 or int(self.directionUser) < Xint < 360: 
+                    while not int(self.directionUser)-10 < Xint < int(self.directionUser)+10:
+                        self.publish_instruction("RIGHT")
                 else:
-                    while not int(self.directionUser)-10 < self.X < int(self.directionUser)+10:
-                        publish_instruction("LEFT")
+                    while not int(self.directionUser)-10 < Xint < int(self.directionUser)+10:
+                        self.publish_instruction("LEFT")
                 self.directionUser = "none"
             
     def publish_instruction(self, direction):
         msg = String()
         msg.data = direction
-        instruction_publisher_.publish(msg)
-        get_logger().info('Published instruction: %s' % msg.data)
+        self.instruction_publisher_.publish(msg)
+        self.get_logger().info('Published instruction: %s' % msg.data)
         
 def main(args=None):
     rclpy.init(args=args)

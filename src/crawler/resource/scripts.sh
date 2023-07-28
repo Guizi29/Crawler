@@ -22,7 +22,7 @@ if [ "$1" == "section2" ]; then
     echo "$2" | sudo tee /sys/class/pwm/pwmchip0/export > /dev/null #pin 12 motor Right, pin 15 motor Left
     #PWM EXPORTED
     sudo chown -R odroid:odroid /sys/class/pwm/pwmchip0/*
-    echo "20000000" | sudo tee /sys/class/pwm/pwmchip0/pwm$2/period > /dev/null
+    echo "18000000" | sudo tee /sys/class/pwm/pwmchip0/pwm$2/period > /dev/null
     #PWM PERIOD SET
 fi
 

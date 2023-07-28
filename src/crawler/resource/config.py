@@ -23,16 +23,11 @@ motor_left_IO2 = 478 #pin 22
 ##################LIGHTS##################
 
 ## number of the first GPIO for light
-light1 = 490 #pin 29 odroid c4
-#light1 = 228 #pin 29 odroid c2
-## number of the second GPIO for light
-light2 = 491 #pin 31 odroid c4
-#light2 = 219 #pin 31 odroid c2
-## number of the third GPIO for light
-light3 = 434 #pin 32 odroid c4
-#light3 = 214 #pin 35 odroid c2
-## compass address
-I2C_adresse = 0x60
+light1 = 490 #pin 29 
 
-# compass accuracy
-compass_accuracy = 5
+## number of the second GPIO for light
+light2 = 491 #pin 31 
+
+## number of the third GPIO for light
+light3 = 434 #pin 32 
+

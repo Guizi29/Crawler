@@ -12,17 +12,21 @@ class Calibrator(Node):
     NORTH_y = 0
     SOUTH_y = 0
     MOVEMENT = "RIGHT"
+    SPEED = "70" 
 
     def __init__(self):
         super().__init__('calibrator')
         self.instruction_publisher_ = self.create_publisher(String, 'instruction', 10)  
         self.compass_publisher_ = self.create_publisher(String, 'compass', 10)
+        self.speed_publisher_ = self.create_publisher(String, 'speed', 10)
         self.publish_instruction()
+        self.publish_speed()
         self.calibration()
         self.publish_instruction()
+        self.publish_speed()
         while rclpy.ok():
             self.publish_compass()
-            time.sleep(5)
+            time.sleep(10)
         rclpy.shutdown()
               
     def calibration(self):
@@ -45,12 +49,19 @@ class Calibrator(Node):
             self.NORTH_y = max(y_values)
             self.SOUTH_y = min(y_values)
         self.MOVEMENT = "STOP"
+        self.SPEED = "0"
             
     def publish_instruction(self):
         msg = String()
         msg.data = self.MOVEMENT
         self.instruction_publisher_.publish(msg)
         self.get_logger().info('Instruction published: "%s"' % msg.data)
+        
+    def publish_speed(self):
+        msg = String()
+        msg.data = self.SPEED
+        self.speed_publisher_.publish(msg)
+        self.get_logger().info('Speed published: "%s"' % msg.data)
             
     def publish_compass(self):
         msg = String()

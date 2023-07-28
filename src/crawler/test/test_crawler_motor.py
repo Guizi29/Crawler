@@ -1,3 +1,10 @@
+# Name of the program : test_crawler_motor.py
+#
+# Node used to start the crawler and test its movements.
+#
+# Author: Guillaume Cren 
+# Date: 21/07/2023
+
 import time
 import rclpy
 from rclpy.node import Node
@@ -31,41 +38,45 @@ class Test_CM(Node):
     def test_move_front(self):
         print("##################ACTIVATION OF THE FRONT MOVE TEST##################")
         self.DIRECTION = "FRONTWARD" 
-        self.CR.forward(75)
-        self.SPEED = "15000000"
+        self.CR.forward()
+        self.CR.speed_settings(75)
+        print("SPEED = 13500000")
         time.sleep(5)
-        self.CR.forward(0)
-        self.SPEED = "0"
+        self.CR.speed_settings(0)
+        print("SPEED = 0")
         time.sleep(5)
 
     def test_move_back(self):
         print("##################ACTIVATION OF THE BACK MOVE TEST##################")
         self.DIRECTION = "BACKWARD" 
-        self.CR.backward(75)
-        self.SPEED = "15000000"
+        self.CR.backward()
+        self.CR.speed_settings(75)
+        print("SPEED = 13500000")
         time.sleep(5)
-        self.CR.backward(0)
-        self.SPEED = "0"
+        self.CR.speed_settings(0)
+        print("SPEED = 0")
         time.sleep(5)
 
     def test_move_left(self):
         print("##################ACTIVATION OF THE LEFT MOVE TEST##################")
         self.DIRECTION = "LEFT" 
-        self.CR.left(75)
-        self.SPEED = "15000000"
+        self.CR.left()
+        self.CR.speed_settings(75)
+        print("SPEED = 13500000")
         time.sleep(5)
-        self.CR.left(0)
-        self.SPEED = "0"
+        self.CR.speed_settings(0)
+        print("SPEED = 0")
         time.sleep(5)
 
     def test_move_right(self):
         print("##################ACTIVATION OF THE RIGHT MOVE TEST##################")
         self.DIRECTION = "RIGHT" 
-        self.CR.right(75)
-        self.SPEED = "15000000"
+        self.CR.right()
+        self.CR.speed_settings(75)
+        print("SPEED = 13500000")
         time.sleep(5)
-        self.CR.right(0)
-        self.SPEED = "0"
+        self.CR.speed_settings(0)
+        print("SPEED = 0")
         time.sleep(5)
 
 def main(args=None):

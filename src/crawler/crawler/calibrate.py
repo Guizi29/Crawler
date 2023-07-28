@@ -1,3 +1,10 @@
+# Name of the program : test_instructions_speed.py
+#
+# Test node for testing speed controls
+#
+# Author: Guillaume Cren 
+# Date: 24/07/2023
+
 import qwiic_icm20948
 import time
 import rclpy
@@ -15,7 +22,7 @@ class Direction(Node):
     Y = 0
     
     def __init__(self):
-        super().__init__('publisher_orientation')
+        super().__init__('calibrate')
         self.subscription = self.create_subscription(
             String,
             'compass',

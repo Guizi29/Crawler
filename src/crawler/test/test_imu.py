@@ -1,3 +1,10 @@
+# Name of the program : test_imu.py
+#
+# This the code from github repository : https://github.com/sparkfun/Qwiic_9DoF_IMU_ICM20948_Py
+#
+# Author: Guillaume Cren 
+# Date: 14/06/2023
+
 from __future__ import print_function
 import qwiic_icm20948
 import time

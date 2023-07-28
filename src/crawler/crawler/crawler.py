@@ -1,16 +1,17 @@
-# Name of the program : init_motor.py
+# Name of the program : crawler.py
 #
-# Create a node to initialiaze the function of the crawler like PWM, GPIO or IO2
+# Class that uses motor.py functions based on export numbers
 #
 # Author: Guillaume Cren & Marie Le Bris
 # Date: 14/06/2023
 
 import rclpy
 from rclpy.node import Node
-from motor import Motor
 import config
 import os
 import subprocess
+import sys
+from motor import Motor
 
 class Crawler(Node):
 
@@ -21,7 +22,7 @@ class Crawler(Node):
         self.ML = Motor(config.motor_left_IO2, config.motor_left_DIR, 1)
         self.init_IO2_DIR()
         self.init_PWM()
-        self.init_light()
+        #self.init_light()
         self.get_logger().info('All components are initialized, Crawler initialized')
 
     ## Documentation for init_I02_DIR method.
@@ -55,7 +56,6 @@ class Crawler(Node):
             print("Error enabling PWM for motor_right_PWM")
             return False
 
-
     ## Documentation for on_off method.
     #  enables or disables motors
     #  @param self The object pointer.
@@ -72,7 +72,6 @@ class Crawler(Node):
             print("Error setting IO2 for motor_left_IO2")
             return False
 
-
     #############################################--DECLARATION OF THE DIRECTIONS--#############################################
     ## Documentation for forward method.
     #  moves forward the robot at variable speed
@@ -80,18 +79,11 @@ class Crawler(Node):
     #  @param self The object pointer.
     #  @param duty_cycle: percentage value of the robot speed (0 to 100)
     #  @type duty_cycle: int
-    def forward(self, duty_cycle):
+    def forward(self):
         if self.MR.DIR(config.motor_right_DIR, int(0)) == True:
             if self.ML.DIR(config.motor_left_DIR, int(1)) == True:
-                if self.MR.duty_cycle(duty_cycle, config.motor_right_PWM) == True:
-                    if self.ML.duty_cycle(duty_cycle, config.motor_left_PWM) == True:
-                        return True
-                    else:
-                        print("Error setting duty cycle for motor_left_PWM")
-                        return False
-                else:
-                    print("Error setting duty cycle for motor_right_PWM")
-                    return False
+                return True 
+                self.get_logger().info('Moving backward')
             else:
                 print("Error setting direction for motor_left_DIR")
                 return False
@@ -105,19 +97,11 @@ class Crawler(Node):
     #  @param self The object pointer.
     #  @param duty_cycle: percentage value of the robot speed (0 to 100)
     #  @type duty_cycle: int
-    def backward(self, duty_cycle):
+    def backward(self):
         if self.MR.DIR(config.motor_right_DIR, 1) == True:
             if self.ML.DIR(config.motor_left_DIR, 0) == True:
-                if self.MR.duty_cycle(duty_cycle, config.motor_right_PWM) == True:
-                    if self.ML.duty_cycle(duty_cycle, config.motor_left_PWM) == True:
-                        self.get_logger().info('Moving backward')
-                        return True
-                    else:
-                        print("Error setting duty cycle for motor_left_PWM")
-                        return False
-                else:
-                    print("Error setting duty cycle for motor_right_PWM")
-                    return False
+                return True 
+                self.get_logger().info('Moving backward')
             else:
                 print("Error setting direction for motor_left_DIR")
                 return False
@@ -130,19 +114,11 @@ class Crawler(Node):
     #  @param self The object pointer.
     #  @param duty_cycle: percentage value of the robot speed (0 to 100)
     #  @type duty_cycle: int
-    def right(self, duty_cycle):
+    def right(self):
         if self.MR.DIR(config.motor_right_DIR, 0) == True:
             if self.ML.DIR(config.motor_left_DIR, 0) == True:
-                if self.MR.duty_cycle(duty_cycle, config.motor_right_PWM) == True:
-                    if self.ML.duty_cycle(duty_cycle, config.motor_left_PWM) == True:
-                        self.get_logger().info('Rotating right')
-                        return True
-                    else:
-                        print("Error setting duty cycle for motor_left_PWM")
-                        return False
-                else:
-                    print("Error setting duty cycle for motor_right_PWM")
-                    return False
+                return True 
+                self.get_logger().info('Rotating right')
             else:
                 print("Error setting direction for motor_left_DIR")
                 return False
@@ -155,24 +131,31 @@ class Crawler(Node):
     #  @param self The object pointer.
     #  @param duty_cycle: percentage value of the robot speed (0 to 100)
     #  @type duty_cycle: int    
-    def left(self, duty_cycle):
+    def left(self):
         if self.MR.DIR(config.motor_right_DIR, 1) == True:
             if self.ML.DIR(config.motor_left_DIR, 1) == True:
-                if self.MR.duty_cycle(duty_cycle, config.motor_right_PWM) == True:
-                    if self.ML.duty_cycle(duty_cycle, config.motor_left_PWM) == True:
-                        self.get_logger().info('Rotating left')
-                        return True
-                    else:
-                        print("Error setting duty cycle for motor_left_PWM")
-                        return False
-                else:
-                    print("Error setting duty cycle for motor_right_PWM")
-                    return False
+                return True 
+                self.get_logger().info('Rotating left')
             else:
                 print("Error setting direction for motor_left_DIR")
                 return False
         else:
             print("Error setting direction for motor_right_DIR")
+            return False
+            
+    def speed_settings(self, duty_cycle):
+        if self.MR.duty_cycle(duty_cycle, config.motor_right_PWM) == True:
+            if self.ML.duty_cycle(duty_cycle, config.motor_left_PWM) == True:
+                if duty_cycle == 0:
+                    self.get_logger().info('We are stopped')
+                else:
+                    self.get_logger().info('We are moving !!')
+                return True
+            else:
+                print("Error setting duty cycle for motor_left_PWM")
+                return False
+        else:
+            print("Error setting duty cycle for motor_right_PWM")
             return False
 
     #############################################--SET UP FOR THE LIGHTS--#############################################
