@@ -49,21 +49,21 @@ This directory contains the ROS2 work tree. It contains all the code required to
 All the code used to run the crawler is written in Python and uses ROS2.
 Here's a short explanation of each code in the repertory /crawler. 
 
-	calibrate.py : code used to calculate the coordinates of the crawler's direction in real time.
+       calibrate.py : code used to calculate the coordinates of the crawler's direction in real time.
 
-	calibrator.py : code used to calibrate the crawler.
+       calibrator.py : code used to calibrate the crawler.
+       
+       config.py : code used to configure odroid pins (PWM, GPIO...)
 
-	config.py : code used to configure odroid pins (PWM, GPIO...)
+       control_dir.py : code used to control the direction of the crawler (listen to the steering instructions published on the /instruction topic).
 
-	control_dir.py : code used to control the direction of the crawler (listen to the steering instructions published on the /instruction topic).
+       control_speed.py : code used to control crawler speed (listen to the speed instructions published on the /speed topic).
 
-	control_speed.py : code used to control crawler speed (listen to the speed instructions published on the /speed topic).
+       crawler.py : same code as for crawler.py in the /test directory, it defines the crawler class.
 
-	crawler.py : same code as for crawler.py in the /test directory, it defines the crawler class.
+       motor.py : same code as for motor.py in the /test directory, it defines the motor class.
 
-	motor.py : same code as for motor.py in the /test directory, it defines the motor class.
-
-	trajector.py : code used to control the crawler using a setpoint coordinate (also published on the /instruction topic)
+       trajector.py : code used to control the crawler using a setpoint coordinate (also published on the /instruction topic)
 
 These codes, called nodes, communicate with each other via topics in which the codes publish messages and listen to them.
 Here is the rqt graph representing the link between nodes.
