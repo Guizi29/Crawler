@@ -41,16 +41,16 @@ This directory contains the ROS2 work tree. It contains all the code required to
     - src/  	
         - crawler/  
             - crawler/
-		- calibrate.py
-		- calibrator.py
-		- config.py
-		- control_dir.py
-		- control_speed.py
-		- crawler.py
-		- __init__.py
-		- motor.py
-		- trajector.py
-		- __pycache__
+			- calibrate.py
+			- calibrator.py
+			- config.py
+			- control_dir.py
+			- control_speed.py
+			- crawler.py
+			- __init__.py
+			- motor.py
+			- trajector.py
+			- __pycache__
 	    - resource/
 		- donnees.csv
 		- scripts.sh
