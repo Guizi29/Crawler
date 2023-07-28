@@ -42,7 +42,7 @@ The command is as follows :
 
 	source /opt/ros/humble/setup.bash
 
-In order to run the crawler from an appropriate environment, a workspace has been created under the name ros2_ws.
+In order to run the crawler from an appropriate environment, a workspace has been created under the name **ros2_ws**.
 It contains all the programs required to run the crawler.
 This directory contains the ROS2 work tree. It contains all the code required to run the crawler.
 
