@@ -9,18 +9,18 @@
 
 **Hardware** :
 
-	-Odroid C4 
+-Odroid C4 
 
-	-Sensor IMU Sparkfun Qwiic 9DoF ICM20948
+-Sensor IMU Sparkfun Qwiic 9DoF ICM20948
 
-	-Speed controller Faulhaber SC5008s 3530
+-Speed controller Faulhaber SC5008s 3530
 
 
 **Software** : 
 
-	-Ubuntu 22.04 
+-Ubuntu 22.04 
 
-	-ROS 2 Humble
+-ROS 2 Humble
 
 
 ## Purpose of the project
@@ -105,19 +105,26 @@ The Sparkfun Qwiic 9DoF ICM20948 IMU sensor module integrates a 3-axis gyroscope
 For more information on the sensor's features, you can visit the official website.
 (https://www.sparkfun.com/products/15335)
 
-The sensor is connected to the odroid c4 via 4 connectors.
-VIN must be connected to the odroid c4's 3.3V DC power supply.
-GND must be connected to a ground on the odroid c4.
-DA (data) must be connected to pin i2c SDA while CL (clock) must be connected to pin i2c SCL.
+The sensor is connected to the odroid c4 via 4 connectors:
+
+-VIN must be connected to the odroid c4's 3.3V DC power supply.
+
+-GND must be connected to a ground on the odroid c4.
+
+-DA (data) must be connected to pin i2c SDA while CL (clock) must be connected to pin i2c SCL.
 
 
 
 
 
 When we set up the system we chose to connect the pins in this way:
+
 VIN - pin 17
+
 GND - pin 25
+
 DA - pin 27
+
 CL - pin 28
 
 The diagram shows : 
