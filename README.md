@@ -107,11 +107,11 @@ For more information on the sensor's features, you can visit the official websit
 
 The sensor is connected to the odroid c4 via 4 connectors:
 
--VIN must be connected to the odroid c4's 3.3V DC power supply.
+- VIN must be connected to the odroid c4's 3.3V DC power supply.
 
--GND must be connected to a ground on the odroid c4.
+- GND must be connected to a ground on the odroid c4.
 
--DA (data) must be connected to pin i2c SDA while CL (clock) must be connected to pin i2c SCL.
+- DA (data) must be connected to pin i2c SDA while CL (clock) must be connected to pin i2c SCL.
 
 
 
@@ -119,13 +119,13 @@ The sensor is connected to the odroid c4 via 4 connectors:
 
 When we set up the system we chose to connect the pins in this way:
 
-VIN - pin 17
+- VIN - pin 17
 
-GND - pin 25
+- GND - pin 25
 
-DA - pin 27
+- DA - pin 27
 
-CL - pin 28
+- CL - pin 28
 
 The diagram shows : 
 
