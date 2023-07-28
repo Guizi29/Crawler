@@ -76,25 +76,25 @@ These include /trajector, which doesn't work yet but has already been sketched o
 
 As for the /resource directory, it contains the no-python files used by some nodes to perform certain tasks. Here's an explanation of these files:
 
-	donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic 		field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
+- donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic 		field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
 
-	scripts.sh : This file contains all the scripts used by motor.py to write to directories related to crawler control (PWM, GPIO...).
+- scripts.sh : This file contains all the scripts used by motor.py to write to directories related to crawler control (PWM, GPIO...).
 	 
 Finally, the /test directory contains all the test codes to be used to check that the 
 crawler is working properly.
 Some of these codes are imperative to the robot's operation and must be executed 
 before launching nodes in the /crawler directory.
 
-test_imu.py : This code is used to start the IMU sensor, and must be executed first.  
-Before executing this code, go to /dev, then execute the following line : 
+- test_imu.py : This code is used to start the IMU sensor, and must be executed first.  
+	Before executing this code, go to /dev, then execute the following line : 
 
 	sudo chmod 666 i2c-1
 
-test_crawler_motor.py :  This code is used to start the crawler and test its movements. This code must be launched in a second step. 
+- test_crawler_motor.py :  This code is used to start the crawler and test its movements. This code must be launched in a second step. 
 
-test_instructions_dir : This code is used to test direction control by sending direction commands to /control_dir (/control_dir must be run in parallel).
+- test_instructions_dir : This code is used to test direction control by sending direction commands to /control_dir (/control_dir must be run in parallel).
 
-test_instructions_speed : This code is used to test speed control by sending speed setpoints to /control_speed (/control_speed must be run in parallel).
+- test_instructions_speed : This code is used to test speed control by sending speed setpoints to /control_speed (/control_speed must be run in parallel).
 
 
 ## System installation and wiring
