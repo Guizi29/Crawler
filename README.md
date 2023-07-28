@@ -1,4 +1,4 @@
-#Datasheet for the crawler 
+# Datasheet for the crawler 
 
 Author : Guillaume Cren
 Contact : crenguillaume29@gmail.com 
@@ -14,13 +14,13 @@ Ubuntu 22.04
 ROS 2 Humble
 
 
-##Purpose of the project
+## Purpose of the project
 
 I carried out this project for OBSEA Research, a research center of the Polytechnic University of Catalonia based in Vilanova y La Geltru and specialized in the study of the seabed and the collection of oceanographic data, as part of my technical internship during my engineering studies. The aim of this robotics project was to operate a 2-wheeled underwater robot called the "crawler". This robot allows ...
 My mission was to rework the system already present in the robot. The basic system was based on python libraries created by my predecessor and controlled via a Web API. Danial Toma, my tutor during this internship, asked me to convert this system to ROS 2 Humble and to integrate a new sensor into the system. 
 
 
-##ROS2 workspace 
+## ROS2 workspace 
 
 The first step is to install Ubuntu 22.04 Jammy to run ROS 2 Humble. 
 Old version: Ubuntu 20.04 Focal.  
@@ -122,9 +122,9 @@ test_instructions_dir : This code is used to test direction control by sending d
 test_instructions_speed : This code is used to test speed control by sending speed setpoints to /control_speed (/control_speed must be run in parallel).
 
 
-System installation and wiring
+## System installation and wiring
 
-Install the imu 
+### Install the imu 
 
 The Sparkfun Qwiic 9DoF ICM20948 IMU sensor module integrates a 3-axis gyroscope, a 3-axis accelerometer and a 3-axis magnetometer.
 For more information on the sensor's features, you can visit the official website.
@@ -149,7 +149,7 @@ The diagram shows :
 
 
 
-##Install all components 
+### Install all components 
 
 The rest of the connectors are listed below:
 
@@ -161,7 +161,7 @@ The rest of the connectors are listed below:
 
 You can find the details of these connections in the config.py code.
 
-##Calibration
+## Calibration
 
 The calibration nodes are /calibrator who set up the compass for the crawler environment and /calibrate who measure the orientation of the crawler in real time. 
 The calibrator node works by turning the crawler around himself during 40 seconds,  during which the crawler will take the magnetometer measures of the environment. 
