@@ -32,11 +32,9 @@ My mission was to rework the system already present in the robot. The basic syst
 
 ## ROS2 workspace 
 
-The first step is to install Ubuntu 22.04 Jammy to run ROS 2 Humble.  
+The first step is to install **Ubuntu 22.04 Jammy**.   
 
-Old version: Ubuntu 20.04 Focal.  
-
-Once the upgrade is complete, you can install ROS 2 Humble according to the instructions on the [ROS2 website](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html). 
+Once the upgrade is complete, you can install **ROS 2 Humble** according to the instructions on the [ROS2 website](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html). 
 
 Once ROS 2 Humble is installed. You'll still need to source it each time you open a new terminal to run code using ROS2. 
 
@@ -46,26 +44,26 @@ The command is as follows :
 
 In order to run the crawler from an appropriate environment, a workspace has been created under the name ros2_ws.
 It contains all the programs required to run the crawler.
-This directory contains the ROS2 work tree. It contains all the code required to run the crawler. Here's the tree :
+This directory contains the ROS2 work tree. It contains all the code required to run the crawler.
 
 All the code used to run the crawler is written in Python and uses ROS2.
 Here's a short explanation of each code in the repertory /crawler. 
 
-calibrate.py : code used to calculate the coordinates of the crawler's direction in real time.
+	calibrate.py : code used to calculate the coordinates of the crawler's direction in real time.
 
-calibrator.py : code used to calibrate the crawler.
+	calibrator.py : code used to calibrate the crawler.
 
-config.py : code used to configure odroid pins (PWM, GPIO...)
+	config.py : code used to configure odroid pins (PWM, GPIO...)
 
-control_dir.py : code used to control the direction of the crawler (listen to the steering instructions published on the /instruction topic).
+	control_dir.py : code used to control the direction of the crawler (listen to the steering instructions published on the /instruction topic).
 
-control_speed.py : code used to control crawler speed (listen to the speed instructions published on the /speed topic).
+	control_speed.py : code used to control crawler speed (listen to the speed instructions published on the /speed topic).
 
-crawler.py : same code as for crawler.py in the /test directory, it defines the crawler class.
+	crawler.py : same code as for crawler.py in the /test directory, it defines the crawler class.
 
-motor.py : same code as for motor.py in the /test directory, it defines the motor class.
+	motor.py : same code as for motor.py in the /test directory, it defines the motor class.
 
-trajector.py : code used to control the crawler using a setpoint coordinate (also published on the /instruction topic)
+	trajector.py : code used to control the crawler using a setpoint coordinate (also published on the /instruction topic)
 
 These codes, called nodes, communicate with each other via topics in which the codes publish messages and listen to them.
 Here is the rqt graph representing the link between nodes.
@@ -78,9 +76,9 @@ These include /trajector, which doesn't work yet but has already been sketched o
 
 As for the /resource directory, it contains the no-python files used by some nodes to perform certain tasks. Here's an explanation of these files:
 
-donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
+	donnees.csv : Csv file used by calibrator.py to collect calibration data. /calibrator will then scan the data in this file to find the maximum and minimum magnetic 		field along the X and Y axes of the IMU. This will give us the North direction, which we can communicate to the /calibrate node.
 
-scripts.sh : This file contains all the scripts used by motor.py to write to directories related to crawler control (PWM, GPIO...).
+	scripts.sh : This file contains all the scripts used by motor.py to write to directories related to crawler control (PWM, GPIO...).
 	 
 Finally, the /test directory contains all the test codes to be used to check that the 
 crawler is working properly.
