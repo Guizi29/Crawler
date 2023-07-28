@@ -16,7 +16,8 @@ ROS 2 Humble
 
 ## Purpose of the project
 
-I carried out this project for OBSEA Research, a research center of the Polytechnic University of Catalonia based in Vilanova y La Geltru and specialized in the study of the seabed and the collection of oceanographic data, as part of my technical internship during my engineering studies. The aim of this robotics project was to operate a 2-wheeled underwater robot called the "crawler". This robot allows ...
+I carried out this project for OBSEA Research, a research center of the Polytechnic University of Catalonia based in Vilanova y La Geltru and specialized in the study of the seabed and the collection of oceanographic data, as part of my technical internship during my engineering studies. The aim of this robotics project was to operate a 2-wheeled underwater robot called the "crawler". 
+
 My mission was to rework the system already present in the robot. The basic system was based on python libraries created by my predecessor and controlled via a Web API. Danial Toma, my tutor during this internship, asked me to convert this system to ROS 2 Humble and to integrate a new sensor into the system. 
 
 
@@ -26,7 +27,7 @@ The first step is to install Ubuntu 22.04 Jammy to run ROS 2 Humble.
 
 Old version: Ubuntu 20.04 Focal.  
 
-Once the upgrade is complete, you can install ROS 2 Humble according to the instructions on the ROS website [Duck Duck Go](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html). 
+Once the upgrade is complete, you can install ROS 2 Humble according to the instructions on the [ROS2 website](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html). 
 
 Once ROS 2 Humble is installed. You'll still need to source it each time you open a new terminal to run code using ROS2. 
 
