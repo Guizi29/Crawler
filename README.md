@@ -88,8 +88,9 @@ Some of these codes are imperative to the robot's operation and must be executed
 before launching nodes in the /crawler directory.
 
 test_imu.py : This code is used to start the IMU sensor, and must be executed first.  
-Before executing this code, go to /dev, then execute the following line.
-- sudo chmod 666 i2c-1
+Before executing this code, go to /dev, then execute the following line.	
+
+	sudo chmod 666 i2c-1
 
 test_crawler_motor.py :  This code is used to start the crawler and test its movements. This code must be launched in a second step. 
 
