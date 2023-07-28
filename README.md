@@ -41,34 +41,34 @@ This directory contains the ROS2 work tree. It contains all the code required to
     - src/  	
         - crawler/  
             - crawler/
-            - calibrate.py
-            - calibrator.py
-            - config.py
-            - control_dir.py
-            - control_speed.py
-            - crawler.py
-            - __init__.py
-            - motor.py
-            - trajector.py
-            - __pycache__/
-	- resource/
-	    - donnees.csv
-	    - scripts.sh
-        - test/
-            - config.py
-            - crawler.py
-            - motor.py
-            - test_copyright.py
-            - test_crawler_motor.py
-            - test_flake8.py
-            - test_imu.py
-            - test_instructions_dir.py
-            - test_instructions_speed.py
-            - test_pep257.py
-            - __pycache__/
-        - package.xml
-        - setup.cfg
-        - setup.py
+		- calibrate.py
+		- calibrator.py
+            	- config.py
+            	- control_dir.py
+            	- control_speed.py
+            	- crawler.py
+            	- __init__.py
+            	- motor.py
+            	- trajector.py
+            	- __pycache__/
+	    	- resource/
+	    	- donnees.csv
+	    	- scripts.sh
+           - test/
+            	- config.py
+            	- crawler.py
+            	- motor.py
+            	- test_copyright.py
+            	- test_crawler_motor.py
+            	- test_flake8.py
+            	- test_imu.py
+            	- test_instructions_dir.py
+            	- test_instructions_speed.py
+            	- test_pep257.py
+            	- __pycache__/
+            - package.xml
+            - setup.cfg
+            - setup.py
 
 
 All the code used to run the crawler is written in Python and uses ROS2.
