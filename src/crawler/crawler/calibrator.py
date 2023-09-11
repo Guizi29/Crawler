@@ -44,10 +44,10 @@ class Calibrator(Node):
                 data = line.strip().split()
                 x_values.append(float(data[0]))
                 y_values.append(float(data[1]))
-            self.NORTH_x = max(x_values)
-            self.SOUTH_x = min(x_values)
-            self.NORTH_y = max(y_values)
-            self.SOUTH_y = min(y_values)
+            self.NORTH_x = min(x_values)
+            self.SOUTH_x = max(x_values)
+            self.NORTH_y = min(y_values)
+            self.SOUTH_y = max(y_values)
         self.MOVEMENT = "STOP"
         self.SPEED = "0"
             
