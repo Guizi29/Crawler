@@ -65,10 +65,10 @@ class Direction(Node):
             mag_y2 = self.from_degrees_to_mag_180_360(degree_y2)
         print(mag_y1, mag_y2)
         print(mag_y)
-        if mag_y1-20 <= mag_y <= mag_y1+20:
+        if mag_y1-10 <= mag_y <= mag_y1+10:
             self.X = degree_x1
             self.Y = degree_y1
-        if mag_y2-20 <= mag_y <= mag_y2+20:
+        if mag_y2-10 <= mag_y <= mag_y2+10:
             self.X = degree_x2
             self.Y = degree_y2
             
